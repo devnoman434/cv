@@ -8,6 +8,7 @@ let generalObj = {
     inter : "INTERESTS",
     certificate : "CERTIFICATES",
     linkss : "SOCIAL LINKS",
+    profile: "PROFILE",
     font_style: "Inter",
     title_size: "12", // 1.1vw
     content_size: "10", // 0.7vw
@@ -72,9 +73,8 @@ let generalObj = {
         company: "Company Name/ California USA",
         city: "",
         designation: "JOB POSITION HERE",
-        isWorking: true,
         startDate: "2012",
-        endDate: "",
+        endDate: "PRESENT",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan magna.",
       },
@@ -92,9 +92,8 @@ let generalObj = {
         company: "Company Name/ California USA",
         city: "",
         designation: "JOB POSITION HERE",
-        isWorking: true,
         startDate: "2012",
-        endDate: "",
+        endDate: "PRESENT",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       },

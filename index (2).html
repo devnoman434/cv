@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="heading-container">
+        <h1 id="main-heading"></h1>
+        <h2 id="sub-heading"></h2>
+    </div>
+
+    <div id="main-div">
+        <div id="left">
+
+            <!-- contact -->
+            <h3 id="contact"></h3>
+            <p id="phoneNo"></p>
+            <p id="email"></p>
+            <p id="address"></p>
+            <!-- skills -->
+            <h3 id="skills"></h3>
+            <p id="interface"> <br><span id="intermediate"></span></p>
+            <!-- Software skills -->
+            <h3 id="software"></h3>
+            <h4 id="Adobe"></h4>
+            <!-- languages -->
+            <h3 id="languages"></h3>
+            <p id="English"> <br><span id="expert"></span></p>
+            <!-- interest -->
+            <h3 id="interest"></h3>
+            <h4 id="Research"></h4>
+            <!-- Certifications -->
+            <h3 id="certificates"></h3>
+            <p id="web-design"></p><br>
+            <!-- Social links -->
+            <h3 id="links"></h3>
+            <h5 id="facebook"></h5>
+            <p id="fb-link"></p><br>
+            <h5 id="linkedin"></h5>
+            <p id="linkedin-link"></p>
+        </div>
+        <div id="right">
+            <!-- profile -->
+            <h3 id="profile"></h3>
+            <p id="profile-p"></p>
+            <!-- Experience -->
+            <h3 id="experience"></h3>
+            <h5 id="job-POSITION"></h5>
+            <!-- education -->
+            <h3 id="education"></h3>
+            <h5 id="name-university"></h5>
+            <!-- projects -->
+            <h3 id="projects"></h3>
+            <h5 id="PDF"></h5>
+            <!-- publications -->
+            <h3 id="publications"></h3>
+            <h5 id="Research-paper"></h5>
+            <!-- referal -->
+            <h3 id="reference"></h3>
+            <h5 id="referal"></h5>
+        </div>
+    </div>
+    <script>
+        let generalObj = {
+            name: "cv_6",
+            phone: "CONTACT",
+            soft: "SOFTWARE SKILLS",
+            characteristic: "SKILLS",
+            language: "LANGUAGES",
+            inter: "INTERESTS",
+            certificate: "CERTIFICATES",
+            lin: "SOCIAL LINKS",
+            profile: "PROFILE",
+            experiences: "EXPERIENCE",
+            edu: "EDUCATION",
+            proj: "PROJECTS",
+            public: "PUBLICATIONS",
+            ref: "REFERENCE",
+            page_size: "letter/A4",
+            font_color: " #81233A",
+            font_style: "Inter",
+            title_size: "12", // 1.1vw
+            content_size: "10", // 0.7vw
+            bullets: 1,
+            objective: "objective_here",
+            user_details: {
+                name: "KAREN RICHARDS",
+                imagePath: null,
+                email: "thisisanexamp@gmail.com",
+                phoneNo: "+000 123 456 789",
+                profession: "PROFESSIONAL TITLE",
+                portfolioLink: "karenrichards.com",
+                address: "ss Street City/Zip Code -456 Old town City",
+            },
+            about:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan magna, non efficitur risus. Proin blandit efficitur nibh ut pretium.",
+            education: [
+                {
+                    degree: "BACHLOR'S IN COMPUTER SCIENCE",
+                    school: "NAME OF YOUR UNIVERSITY",
+                    grade: "10",
+                    isStudying: false,
+                    startDate: "2009",
+                    endDate: "2011",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan",
+                },
+                {
+                    degree: "Degree name",
+                    school: "NAME OF YOUR UNIVERSITY",
+                    grade: "10",
+                    isStudying: true,
+                    startDate: "2009",
+                    endDate: "2011",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan",
+                },
+                {
+                    degree: "Degree name",
+                    school: "NAME OF YOUR UNIVERSITY",
+                    grade: "10",
+                    isStudying: true,
+                    startDate: "2009",
+                    endDate: "2011",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan",
+                },
+                {
+                    degree: "Degree name",
+                    school: "NAME OF YOUR UNIVERSITY",
+                    grade: "10",
+                    isStudying: true,
+                    startDate: "2009",
+                    endDate: "2011",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan",
+                },
+            ],
+            experience: [
+                {
+                    company: "Company Name/ California USA",
+                    city: "",
+                    designation: "JOB POSITION HERE",
+                    startDate: "2012",
+                    endDate: "PRESENT",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan magna.",
+                },
+                {
+                    company: "Company Name/ California USA",
+                    city: "",
+                    designation: "JOB POSITION HERE",
+                    startDate: "Jun 2012",
+                    endDate: "Mar 2015",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan magna.",
+                },
+                {
+                    company: "Company Name/ California USA",
+                    city: "",
+                    designation: "JOB POSITION HERE",
+                    startDate: "2012",
+                    endDate: "PRESENT",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                },
+            ],
+            projects: [
+                {
+                    name: "PDF READER ",
+                    projectLink: "link/projectname.com",
+                    isWorking: false,
+                    startDate: "March",
+                    endDate: "May 20",
+                    field: "User Interface / User Experience Designer",
+                    description:
+                        "Lorem ipsum is a placeholder text commonly used in the design and printing industry.",
+                },
+                {
+                    name: "CV MAKER DESIGN",
+                    projectLink: "link/projectname.com",
+                    isWorking: false,
+                    startDate: "March",
+                    endDate: "May 20",
+                    field: "User Interface / User Experience Designer",
+                    description:
+                        "Lorem ipsum is a placeholder text commonly used in the design and printing industry.",
+                },
+            ],
+            publications: [
+                {
+                    name: "RESEARCH PAPER FOR FINAL YEAR",
+                    description:
+                        "Lorem ipsum is a placeholder text commonly used in the design and printing industry.",
+                },
+                {
+                    name: "RESEARCH PAPER FOR FINAL YEAR",
+                    description:
+                        "Lorem ipsum is a placeholder text commonly used in the design and printing industry. ipsum is a placeholder text commonly used in the design and printing industry.",
+                },
+            ],
+            certificates: [
+                {
+                    name: "Web Designing Certification",
+                    number: "UNI-UIUX-2022458",
+                    description: "Design Certifications from Google",
+                },
+                {
+                    name: "UI/UX Designing Certification",
+                    number: "UNI-UIUX-2022458",
+                    description: "Design Certifications from Google",
+                },
+            ],
+            software: [
+                {
+                    name: "Adobe Photoshop",
+                    level: 1,
+                },
+                {
+                    name: "Microsoft Word",
+                    level: 2,
+                },
+                {
+                    name: "MS Office",
+                    level: 2,
+                },
+                {
+                    name: "Adobe illistrator",
+                    level: 1,
+                },
+                {
+                    name: "PyCharm",
+                    level: 3,
+                },
+                {
+                    name: "Android Studio",
+                    level: 3,
+                },
+                {
+                    name: "VS code",
+                    level: 1,
+                },
+            ],
+            languages: [
+                {
+                    name: "English",
+                    level: 2,
+                },
+                {
+                    name: "Urdu",
+                    level: 0,
+                },
+                {
+                    name: "japaness",
+                    level: 2,
+                },
+                {
+                    name: "Russian",
+                    level: 1,
+                },
+            ],
+            interest: [
+                {
+                    name: "Research",
+                },
+                {
+                    name: "Designing",
+                },
+                {
+                    name: "Sketching",
+                },
+            ],
+            social: [
+                {
+                    name: "Facebook",
+                    socialUrl: "facebook/karenrichards",
+                },
+                {
+                    name: "Linkedin",
+                    socialUrl:
+                        "linkedin/karenrichardska.enrichard skarenrichard skarenrichard skarenrichardsk arenrichardskar enrichards karenrichards",
+                },
+            ],
+            skills: [
+                {
+                    name: "interface designing",
+
+                    level: 1,
+                },
+                {
+                    name: "branding designs",
+                    level: 2,
+                },
+                {
+                    name: "Web designs",
+                    level: 0,
+                },
+            ],
+            references: [
+                {
+                    name: "Sara Taylore",
+                    company: "comany name",
+                    title: "Director",
+                    phone: "+1234 56789",
+                },
+            ],
+        };</script>
+
+    <script>
+
+
+        if (generalObj.user_details.name) {
+            const fullName = generalObj.user_details.name;
+            document.getElementById("main-heading").innerText = fullName;
+        }
+
+        if (generalObj.user_details.profession) {
+            const profession = generalObj.user_details.profession;
+            document.getElementById("sub-heading").innerText = profession;
+        }
+
+        if (generalObj.phone) {
+            const contact = generalObj.phone;
+            document.getElementById("contact").innerText = contact;
+        }
+
+        if (generalObj.user_details.phoneNo) {
+            const number = generalObj.user_details.phoneNo;
+            document.getElementById("phoneNo").innerText = number;
+        }
+
+        if (generalObj.user_details.email) {
+            const email = generalObj.user_details.email;
+            document.getElementById("email").innerText = email;
+        }
+
+        if (generalObj.user_details.address) {
+            const address = generalObj.user_details.address;
+            document.getElementById("address").innerText = address;
+        }
+
+        if (generalObj.characteristic) {
+            const skills = generalObj.characteristic;
+            document.getElementById("skills").innerText = skills;
+        }
+        function displaySkillsAndLevels() {
+            let skillLength = generalObj.skills.length;
+            let skillList = "<div style= 'display: flex; flex-wrap : wrap ; column-gap:2vw ;row-gap: 1vw'>";
+
+            for (let i = 0; i < skillLength; i++) {
+                let skill = generalObj.skills[i].name;
+                let level = generalObj.skills[i].level;
+                let levelDescription = getSkillLevelDescription(level);  // Convert level number to description
+                skillList += `<div>
+              <p id="head">
+                ${skill}</p>
+            <p id="desc">
+                (${levelDescription})</p>
+
+            </div>`;  // Use the description instead of the number
+            }
+
+            skillList += "</div>";
+            document.getElementById("interface").innerHTML = skillList;
+        }
+
+        displaySkillsAndLevels();
+        // let levelDescription = getSkillLevelDescription(generalObj.skills);
+        // console.log(levelDescription)
+        function getSkillLevelDescription(level) {
+            if (level === 0) {
+                return "Novice";
+            } else if (level === 1) {
+                return "Intermediate";
+            } else if (level === 2) {
+                return "Expert";
+            } else {
+                return ""; // You can handle this case as per your requirement
+            }
+        }
+
+        console.log(getSkillLevelDescription)
+
+
+
+        if (generalObj.soft) {
+            const soft = generalObj.soft;
+            document.getElementById("software").innerText = soft;
+        }
+
+        //         let softLength = generalObj.software.length;
+        // for (let i = 0; i < softLength; i++) {
+        //     let software = generalObj.software[i];
+        //     // Append the skill name to the element
+        //     console.log(software)
+        //     document.getElementById("Adobe").innerText += software.name + "\n";
+        // }
+
+        let softLength = generalObj.software.length;
+        for (let i = 0; i < softLength; i++) {
+            let software = generalObj.software[i];
+
+            // Create a new element (for example, an <h4> tag) for each software skill
+            let softwareElement = document.createElement('h4');
+
+            // Set the text content of the new element
+            softwareElement.innerText = software.name;
+
+            softwareElement.style.color = '#81233A';
+            softwareElement.style.fontSize = '1.5vw';
+            softwareElement.style.margin = '0px';
+            softwareElement.style.padding = '0.5vw';
+            softwareElement.style.backgroundColor = 'white';
+            softwareElement.style.fontFamily = 'sans-serif';
+
+
+            // Append the new element to the parent container (e.g., "Adobe" can be the container's ID)
+            document.getElementById("Adobe").appendChild(softwareElement);
+        }
+
+        if (generalObj.language) {
+            const languages = generalObj.language;
+            document.getElementById("languages").innerText = languages;
+        }
+
+
+        function displayLanguagesAndLevels() {
+            let langLength = generalObj.languages.length;
+            let langlist = "<div style='display:flex;column-gap: 2vw;flex-wrap: wrap;'>";  // Start the unordered list
+
+            for (let i = 0; i < langLength; i++) {
+                let language = generalObj.languages[i].name;
+                let level = generalObj.languages[i].level;
+                let levelDescription = getSkillLevelDescription(level);
+                langlist += `<div>
+            <p id="lang">${language}</p> 
+            <p id="level">(${levelDescription})</p>
+                </div>`;
+            }
+
+            langlist += "</div>";
+            document.getElementById("English").innerHTML = langlist;
+        }
+        displayLanguagesAndLevels()
+
+        if (generalObj.inter) {
+            const interest = generalObj.inter;
+            document.getElementById("interest").innerText = interest;
+        }
+
+        // Interest Section (Refactored to match the style of the software section)
+        let intLength = generalObj.interest.length;
+        for (let i = 0; i < intLength; i++) {
+            let interest = generalObj.interest[i];
+
+            // Create a new element (for example, an <h4> tag) for each interest
+            let interestElement = document.createElement('h4');
+
+            // Set the text content of the new element
+            interestElement.innerText = interest.name;
+
+            // Apply styles similar to the software section
+            interestElement.style.color = '#81233A';
+            interestElement.style.fontSize = '1.5vw';
+            interestElement.style.margin = '0px';
+            interestElement.style.padding = '0.5vw';
+            interestElement.style.backgroundColor = 'white';
+            interestElement.style.fontFamily = 'sans-serif';
+
+            // Append the new element to the parent container (e.g., "Research" can be the container's ID)
+            document.getElementById("Research").appendChild(interestElement);
+        }
+
+
+        if (generalObj.certificate) {
+            const certificates = generalObj.certificate;
+            document.getElementById("certificates").innerText = certificates;
+        }
+
+        let certLength = generalObj.certificates.length;
+        for (let i = 0; i < certLength; i++) {  // Use certLength instead of intLength
+            let cert = generalObj.certificates[i];
+            // Append the certificate name to the element
+            console.log(cert);
+            document.getElementById("web-design").innerHTML += cert.name + "<br>";
+        }
+
+
+        if (generalObj.lin) {
+            const link = generalObj.lin;
+            document.getElementById("links").innerText = link;
+            console.log(link);
+        }
+
+        function displaysocialAndlinks() {
+            let linkLength = generalObj.social.length;
+            let linklist = "<div>";  // Start the unordered list
+
+            for (let i = 0; i < linkLength; i++) {
+                let name = generalObj.social[i].name;
+                let link = generalObj.social[i].socialUrl;
+                linklist += `<div>
+            <p style='font-size: 1.5vw;font-family: sans-serif;margin: 0px;'>${name}</p>
+            <p style='font-size: 1.5vw;font-family: sans-serif;color: #575757;font-weight: 100; margin:0.5vw;'> ${link} </p>
+            </div>`;
+            }
+
+            linklist += "</div>";
+            document.getElementById("facebook").innerHTML = linklist;
+        }
+
+        displaysocialAndlinks();
+
+        if (generalObj.profile) {
+            const profile = generalObj.profile;
+            document.getElementById("profile").innerText = profile;
+        }
+
+        if (generalObj.about) {
+            const about = generalObj.about;
+            document.getElementById("profile-p").innerText = about;
+        }
+
+        if (generalObj.experiences) {
+            const experience = generalObj.experiences;
+            document.getElementById("experience").innerText = experience;
+            console.log(experience)
+        }
+
+        // function displayexperiences() {
+        //     let expLength = generalObj.experience.length;
+        //     let explist = "<ul>";  // Start the unordered list
+
+        //     for (let i = 0; i < expLength; i++) {
+        //         let designation = generalObj.experience[i].designation;  
+        //         let company = generalObj.experience[i].company;  
+        //         let startDate = generalObj.experience[i].startDate;
+        //         let endDate = generalObj.experience[i].endDate;
+        //         let description =generalObj.experience[i].description;
+        //         explist += `<li>${designation} <br> ${company} <br> ${startDate}-${endDate} <br> ${description} </li>`;  
+        //     }
+
+        //     explist += "</ul>";  
+        //     document.getElementById("job-POSITION").innerHTML = explist;
+        // }
+
+        // displayexperiences();
+
+        function displayexperiences() {
+            let expLength = generalObj.experience.length;
+            let explist = "<div>";  // Start the unordered list
+
+            for (let i = 0; i < expLength; i++) {
+                let designation = generalObj.experience[i].designation;
+                let company = generalObj.experience[i].company;
+                let startDate = generalObj.experience[i].startDate;
+                let endDate = generalObj.experience[i].endDate || "Present"; // Handle empty end date for current jobs
+                let description = generalObj.experience[i].description;
+                explist += `<div style='padding: 0.5vw 0vw;'>
+            <div style='display: flex;justify-content: space-between;'>
+            <p style='font-size: 1.5vw;font-family: sans-serif;margin: 0px;'>${designation}</p>
+            <p style='font-size: 1.5vw;font-family: sans-serif;margin: 0px;'>${startDate} - ${endDate}</p> 
+            </div>
+            <p style='font-size: 1.5vw;font-family: sans-serif;margin: 0px;'>${company}</p>
+            <p style='font-size: 1.5vw;font-family: sans-serif;color: #575757;margin: 0px;font-weight: 100; '>${description}</p>
+           </div>`;
+            }
+
+            explist += "</div>";
+            document.getElementById("job-POSITION").innerHTML = explist;
+        }
+
+        displayexperiences();
+
+        if (generalObj.edu) {
+            const education = generalObj.edu;
+            document.getElementById("education").innerText = education;
+            console.log(education)
+        }
+
+        function displayeducation() {
+            let eduLength = generalObj.education.length;
+            let edulist = "<div>";  // Start the unordered list
+
+            for (let i = 0; i < eduLength; i++) {
+                let school = generalObj.education[i].school;
+                let degree = generalObj.education[i].degree;
+                let start = generalObj.education[i].startDate;
+                let end = generalObj.education[i].endDate || "Present"; // Handle empty end date for current jobs
+                let descrip = generalObj.education[i].description;
+                edulist += `<div style='padding: 0.5vw 0vw;'>
+            <div style='display: flex;justify-content: space-between;'>
+        <p style='font-size: 1.5vw;font-family: sans-serif;margin: 0px;'>${school}</p> 
+        <p style='font-size: 1.5vw;font-family: sans-serif;margin: 0px;'>${start} - ${end}</p> 
+        </div>
+        <p style='font-size: 1.5vw;font-family: sans-serif;margin: 0px;'>${degree}</p> 
+        <p style='font-size: 1.5vw;font-family: sans-serif;color: #575757;margin: 0px;font-weight: 100; '>${descrip}<p>
+        </div>`;
+            }
+
+            edulist += "</div>";
+            document.getElementById("name-university").innerHTML = edulist;
+        }
+
+        displayeducation();
+
+        if (generalObj.proj) {
+            const projects = generalObj.proj;
+            document.getElementById("projects").innerText = projects;
+            console.log(projects)
+        }
+
+        function displayprojects() {
+            let projLength = generalObj.projects.length;
+            let projlist = "<div>";  // Start the unordered list
+
+            for (let i = 0; i < projLength; i++) {
+                let name = generalObj.projects[i].name;
+                let projlink = generalObj.projects[i].projectLink;
+                let star = generalObj.projects[i].startDate;
+                let ending = generalObj.projects[i].endDate || "Present"; // Handle empty end date for current jobs
+                let desc = generalObj.projects[i].description;
+                projlist += `<div style='padding: 0.5vw 0vw;'>
+                    <div style='display: flex;justify-content: space-between;'>
+                <p style='font-size: 1.5vw;font-family: sans-serif;margin: 0px;'>${name}</p>
+                <p style='font-size: 1.5vw;font-family: sans-serif;margin: 0px;'>${star} - ${ending}</p>
+                    </div>
+                <p style='font-size: 1.5vw;font-family: sans-serif;margin: 0px;'>${projlink}</p> 
+                    <p style='font-size: 1.5vw;font-family: sans-serif;color: #575757;margin: 0px;font-weight: 100; '>${desc}</p>
+                </div>`;
+            }
+
+            projlist += "</div>";
+            document.getElementById("PDF").innerHTML = projlist;
+        }
+
+        displayprojects();
+
+        if (generalObj.public) {
+            const publications = generalObj.public;
+            document.getElementById("publications").innerText = publications;
+            console.log(publications)
+        }
+
+        function displaypublications() {
+            let pubLength = generalObj.publications.length;
+            let publist = "<div>";  // Start the unordered list
+
+            for (let i = 0; i < pubLength; i++) {
+                let name = generalObj.publications[i].name;
+                let descript = generalObj.publications[i].description;
+                publist += `<div>
+                    <p style='font-size: 1.5vw;font-family: sans-serif;margin: 0px;'>${name}</p>
+                    <p style='font-size: 1.5vw;font-family: sans-serif;color: #575757;margin: 0px;font-weight: 100; '>${descript}</p>
+                     </div>`;
+            }
+
+            publist += "</div>";
+            document.getElementById("Research-paper").innerHTML = publist;
+        }
+
+        displaypublications();
+
+        if (generalObj.ref) {
+            const references = generalObj.ref;
+            document.getElementById("reference").innerText = references;
+            console.log(references)
+        }
+
+        // let refLength = generalObj.references.length;
+        // for (let i = 0; i < refLength; i++) {
+        //     let ref = generalObj.references[i];
+        //     // Append the reference details to the element
+        //     console.log(ref);
+        //     document.getElementById("referal").innerHTML +=  ref.name + "<br>" + ref.phone + "<br>" + ref.title + "<br><br>";
+        // }
+
+        let refLength = generalObj.references.length;
+        for (let i = 0; i < refLength; i++) {
+            let ref = generalObj.references[i];
+            // Append the reference details to the element with labels
+            document.getElementById("referal").innerHTML +=`<div>
+                <p style='font-size: 1vw;font-family: sans-serif;margin: 0px;'>${ref.name}</p>
+                <div style='display: flex;justify-content: space-between;'>
+                <p style='font-size: 1vw;font-family: sans-serif;margin: 0px;font-weight: 100; '>Company: ${ref.company}</p>
+                <p style='font-size: 1vw;font-family: sans-serif;margin: 0px;font-weight: 100; '>Job Title: ${ref.title}</p>
+                </div>
+                <p style='font-size: 1vw;font-family: sans-serif;color:#575757;margin: 0px;font-weight: 100; '>Phone: ${ref.phone}</p>
+                </div>`
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>
