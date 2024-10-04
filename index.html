@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="heading-container">
+        <h1 id="main-heading"></h1>
+        <h2 id="sub-heading"></h2>
+    </div>
+
+    <div id="main-div">
+        <div id="left">
+
+        <!-- contact -->
+            <h3 id="contact"></h3>
+            <p id="phoneNo"></p>
+            <p id="email"></p>
+            <p id="address"></p>
+        <!-- skills -->
+            <h3 id="skills"></h3>
+            <p id="interface"> <br><span id="intermediate"></span></p>
+            <p id="branding"> <br><span id="expert"></span></p>
+            <p id="Web"> <br><span id="novice"></span></p><br>
+        <!-- Software skills -->
+            <h3 id="software"></h3>
+            <h4 id="Adobe"></h4>
+            <h4 id="Word"></h4>
+            <h4 id="Office"></h4>
+            <h4 id="illustrator"></h4>
+            <h4 id="PyCharm"></h4>
+            <h4 id="Android"></h4>
+            <h4 id="code"></h4>
+        <!-- languages -->
+            <h3 id="languages"></h3>
+            <p id="English"> <br><span id="expert"></span></p>
+            <p id="Urdu"> <br><span id="novice"></span></p>
+            <p id="japaness"> <br><span id="intermediate"></span></p>
+            <p id="Russian"> <br><span id="intermediate"></span></p>
+        <!-- interest -->
+            <h3 id="interest"></h3>
+            <h4 id="Research"></h4>
+            <h4 id="design"></h4>
+            <h4 id="Sketching"></h4>
+        <!-- Certifications -->
+            <h3 id="certificates"></h3>
+            <p id="web-design"></p><br>
+            <p id="UI"></p>
+        <!-- Social links -->
+            <h3 id="links"></h3>
+            <h5 id="facebook"></h5>
+            <p id="fb-link"></p><br>
+            <h5 id="linkedin"></h5>
+            <p id="linkedin-link"></p>
+        </div>
+        <div id="right">
+
+        </div>
+    </div>
+    <script>
+        let generalObj = {
+            name: "cv_6",
+            phone : "CONTACT",
+            soft : "SOFTWARE SKILLS",
+            characteristic : "SKILLS",
+            language : "LANGUAGES",
+            inter : "INTERESTS",
+            certificate : "CERTIFICATES",
+            linksss : "SOCIAL LINKS",
+            page_size: "letter/A4",
+            font_color: " #81233A",
+            font_style: "Inter",
+            title_size: "12", // 1.1vw
+            content_size: "10", // 0.7vw
+            bullets: 1,
+            objective: "objective_here",
+            user_details: {
+                name: "KAREN RICHARDS",
+                imagePath: null,
+                email: "thisisanexamp@gmail.com",
+                phoneNo: "+000 123 456 789",
+                profession: "PROFESSIONAL TITLE",
+                portfolioLink: "karenrichards.com",
+                address: "ss Street City/Zip Code -456 Old town City",
+            },
+            about:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan magna, non efficitur risus. Proin blandit efficitur nibh ut pretium.",
+            education: [
+                {
+                    degree: "BACHLOR'S IN COMPUTER SCIENCE",
+                    school: "NAME OF YOUR UNIVERSITY",
+                    grade: "10",
+                    isStudying: false,
+                    startDate: "2009",
+                    endDate: "2011",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan",
+                },
+                {
+                    degree: "Degree name",
+                    school: "NAME OF YOUR UNIVERSITY",
+                    grade: "10",
+                    isStudying: true,
+                    startDate: "2009",
+                    endDate: "2011",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan",
+                },
+                {
+                    degree: "Degree name",
+                    school: "NAME OF YOUR UNIVERSITY",
+                    grade: "10",
+                    isStudying: true,
+                    startDate: "2009",
+                    endDate: "2011",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan",
+                },
+                {
+                    degree: "Degree name",
+                    school: "NAME OF YOUR UNIVERSITY",
+                    grade: "10",
+                    isStudying: true,
+                    startDate: "2009",
+                    endDate: "2011",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan",
+                },
+            ],
+            experience: [
+                {
+                    company: "Company Name/ California USA",
+                    city: "",
+                    designation: "JOB POSITION HERE",
+                    isWorking: true,
+                    startDate: "2012",
+                    endDate: "",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan magna.",
+                },
+                {
+                    company: "Company Name/ California USA",
+                    city: "",
+                    designation: "JOB POSITION HERE",
+                    isWorking: false,
+                    startDate: "Jun 2012",
+                    endDate: "Mar 2015",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum id leo eu tristique. In ut accumsan magna.",
+                },
+                {
+                    company: "Company Name/ California USA",
+                    city: "",
+                    designation: "JOB POSITION HERE",
+                    isWorking: true,
+                    startDate: "2012",
+                    endDate: "",
+                    description:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                },
+            ],
+            projects: [
+                {
+                    name: "PDF READER ",
+                    projectLink: "link/projectname.com",
+                    isWorking: false,
+                    startDate: "March",
+                    endDate: "May 20",
+                    field: "User Interface / User Experience Designer",
+                    description:
+                        "Lorem ipsum is a placeholder text commonly used in the design and printing industry.",
+                },
+                {
+                    name: "CV MAKER DESIGN",
+                    projectLink: "link/projectname.com",
+                    isWorking: false,
+                    startDate: "March",
+                    endDate: "May 20",
+                    field: "User Interface / User Experience Designer",
+                    description:
+                        "Lorem ipsum is a placeholder text commonly used in the design and printing industry.",
+                },
+            ],
+            publications: [
+                {
+                    name: "RESEARCH PAPER FOR FINAL YEAR",
+                    description:
+                        "Lorem ipsum is a placeholder text commonly used in the design and printing industry.",
+                },
+                {
+                    name: "RESEARCH PAPER FOR FINAL YEAR",
+                    description:
+                        "Lorem ipsum is a placeholder text commonly used in the design and printing industry. ipsum is a placeholder text commonly used in the design and printing industry.",
+                },
+            ],
+            certificates: [
+                {
+                    name: "Web Designing Certification",
+                    number: "UNI-UIUX-2022458",
+                    description: "Design Certifications from Google",
+                },
+                {
+                    name: "UI/UX Designing Certification",
+                    number: "UNI-UIUX-2022458",
+                    description: "Design Certifications from Google",
+                },
+            ],
+            software: [
+                {
+                    name: "Adobe Photoshop",
+                    level: 1,
+                },
+                {
+                    name: "Microsoft Word",
+                    level: 2,
+                },
+                {
+                    name: "MS Office",
+                    level: 2,
+                },
+                {
+                    name: "Adobe illistrator",
+                    level: 1,
+                },
+                {
+                    name: "PyCharm",
+                    level: 3,
+                },
+                {
+                    name: "Android Studio",
+                    level: 3,
+                },
+                {
+                    name: "VS code",
+                    level: 1,
+                },
+            ],
+            languages: [
+                {
+                    name: "English",
+                    level: 2,
+                },
+                {
+                    name: "Urdu",
+                    level: 0,
+                },
+                {
+                    name: "japaness",
+                    level: 2,
+                },
+                {
+                    name: "Russian",
+                    level: 1,
+                },
+            ],
+            interest: [
+                {
+                    name: "Research",
+                },
+                {
+                    name: "Designing",
+                },
+                {
+                    name: "Sketching",
+                },
+            ],
+            social: [
+                {
+                    name: "Facebook",
+                    socialUrl: "facebook/karenrichards",
+                },
+                {
+                    name: "Linkedin",
+                    socialUrl:
+                        "linkedin/karenrichardska.enrichard skarenrichard skarenrichard skarenrichardsk arenrichardskar enrichards karenrichards",
+                },
+            ],
+            skills: [
+                {
+                    name: "interface designing",
+                    
+                    level: 1,
+                },
+                {
+                    name: "branding designs",
+                    level: 2,
+                },
+                {
+                    name: "Web designs",
+                    level: 0,
+                },
+            ],
+            references: [
+                {
+                    name: "Sara Taylore",
+                    company: "comany name",
+                    title: "Director",
+                    phone: "+1234 56789",
+                },
+            ],
+        };</script>
+
+    <script>
+        // let levelDescription = getSkillLevelDescription(skill.level);
+        // function getSkillLevelDescription(level) {
+        //       if (level === 0) {
+        //         return "Novice";
+        //       } else if (level === 1) {
+        //         return "Intermediate";
+        //       } else if (level === 2) {
+        //         return "Expert";
+        //       } else {
+        //         return ""; // You can handle this case as per your requirement
+        //       }
+        //     }
+
+        if (generalObj.user_details.name) {
+            const fullName = generalObj.user_details.name;
+            document.getElementById("main-heading").innerText = fullName;
+        }
+
+        if (generalObj.user_details.profession) {
+            const profession = generalObj.user_details.profession;
+            document.getElementById("sub-heading").innerText = profession;
+        }
+        
+        if (generalObj.phone) {
+            const contact = generalObj.phone;
+            document.getElementById("contact").innerText = contact;
+        }
+
+        if (generalObj.user_details.phoneNo) {
+            const number = generalObj.user_details.phoneNo;
+            document.getElementById("phoneNo").innerText = number;
+        }
+
+        if (generalObj.user_details.email) {
+            const email = generalObj.user_details.email;
+            document.getElementById("email").innerText = email;
+        }
+
+        if (generalObj.user_details.address) {
+            const address = generalObj.user_details.address;
+            document.getElementById("address").innerText = address;
+        }
+        
+        if (generalObj.characteristic) {
+            const skills = generalObj.characteristic;
+            document.getElementById("skills").innerText = skills;
+        }
+function displaySkillsAndLevels() {
+    let skillLength = generalObj.skills.length;
+    let skillList = "<ul>"; 
+
+    for (let i = 0; i < skillLength; i++) {
+        let skill = generalObj.skills[i].name;  
+        let level = generalObj.skills[i].level;  
+        skillList += `<li>${skill} - Level: ${level}</li>`;  
+    }
+
+    skillList += "</ul>";  
+    document.getElementById("interface").innerHTML = skillList;
+}
+displaySkillsAndLevels();
+
+if (generalObj.soft) {
+            const soft = generalObj.soft;
+            document.getElementById("software").innerText = soft;
+        }
+
+        let softLength = generalObj.software.length;
+for (let i = 0; i < softLength; i++) {
+    let software = generalObj.software[i];
+    // Append the skill name to the element
+    console.log(software)
+    document.getElementById("Adobe").innerText += software.name + "\n";
+}
+if (generalObj.language) {
+            const languages = generalObj.language;
+            document.getElementById("languages").innerText = languages;
+        }
+
+
+        function displayLanguagesAndLevels() {
+    let langLength = generalObj.languages.length;
+    let langlist = "<ul>";  // Start the unordered list
+
+    for (let i = 0; i < langLength; i++) {
+        let language = generalObj.languages[i].name;  
+        let level = generalObj.languages[i].level;  
+        langlist += `<li>${language} - Level: ${level}</li>`;  
+    }
+
+    langlist += "</ul>";  
+    document.getElementById("English").innerHTML = langlist;
+}
+
+displayLanguagesAndLevels();
+
+if (generalObj.inter) {
+            const interest = generalObj.inter;
+            document.getElementById("interest").innerText = interest;
+        }
+
+        let intLength = generalObj.interest.length;
+for (let i = 0; i < intLength; i++) {
+    let interest = generalObj.interest[i];
+    // Append the skill name to the element
+    console.log(interest)
+    document.getElementById("Research").innerText += interest.name + "\n";
+}
+
+if (generalObj.certificate) {
+            const certificates = generalObj.certificate;
+            document.getElementById("certificates").innerText = certificates;
+        }
+
+        let certLength = generalObj.certificates.length;
+for (let i = 0; i < intLength; i++) {
+    let cert = generalObj.certificates[i];
+    // Append the skill name to the element
+    console.log(cert)
+    document.getElementById("web-design").innerText += cert.name + "\n";
+}
+
+if (generalObj.linksss) {
+    const links = generalObj.linksss;
+    document.getElementById("links").innerText = links;
+}
+
+        
+    </script>
+
+
+
+
+</body>
+
+</html>
